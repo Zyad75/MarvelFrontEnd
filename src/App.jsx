@@ -11,7 +11,7 @@ import Favoris from "./pages/Favoris";
 import LogoMarvel from "./assets/LogoMarvel.png";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [nameOfChar, setNameOfChar] = useState("");
 
   return (
     <Router>
@@ -28,9 +28,15 @@ function App() {
         </div>
       </header>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route
+          path="/"
+          element={<Home setNameOfChar={setNameOfChar} />}
+        ></Route>
         <Route path="/comics" element={<Comics />}></Route>
-        <Route path="/comicsOfChar/:id" element={<ComicsOfChar />}></Route>
+        <Route
+          path="/comicsOfChar/:id"
+          element={<ComicsOfChar nameOfChar={nameOfChar} />}
+        ></Route>
         <Route path="/favoris" element={<Favoris />}></Route>
       </Routes>
     </Router>

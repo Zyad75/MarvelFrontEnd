@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Modal from "../components/Modal";
 import { Link } from "react-router-dom";
-const Home = () => {
+const Home = ({ setNameOfChar }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [visible, setVisible] = useState(false);
@@ -35,19 +35,23 @@ const Home = () => {
             <div className="charAndImg">
               {data.results.map((elem) => {
                 const character = elem._id;
+
                 return (
                   <>
                     <div className="charAndDesc">
                       <Link
                         className="linkComicsOfChar"
                         to={`/comicsOfChar/${character}`}
+                        onClick={() => {
+                          setNameOfChar(elem.name);
+                        }}
                       >
                         <img
                           className="imgChar"
                           src={`${elem.thumbnail.path}.${elem.thumbnail.extension}`}
                           alt=""
                         />
-                        <p>{elem.name}</p>
+                        <p className="nameChar">{elem.name}</p>
                       </Link>
                       {elem.description && (
                         <button

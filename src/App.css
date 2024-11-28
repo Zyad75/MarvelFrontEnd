@@ -73,6 +73,9 @@ header img {
   width: 250px;
   object-fit: cover;
 }
+.nameChar {
+  width: 250px;
+}
 .descCharacter {
   font-size: 12px;
   width: 100px;
