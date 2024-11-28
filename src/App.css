@@ -34,8 +34,8 @@ header {
 }
 
 header img {
-  height: 5%;
-  width: 25%;
+  height: 100px;
+  width: 250px;
   border-radius: 5px;
   object-fit: cover;
 }
