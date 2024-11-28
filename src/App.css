@@ -138,6 +138,9 @@ de la page comics portent les noms des classNames de la page Home */
   width: 250px;
   object-fit: cover;
 }
+.imgChar:hover {
+  opacity: 0.7;
+}
 .nameChar {
   width: 250px;
 }
@@ -151,6 +154,10 @@ de la page comics portent les noms des classNames de la page Home */
   gap: 10px;
   text-decoration: none;
   color: white;
+}
+.linkComicsOfChar:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 .charAndDesc {
   display: flex;
