@@ -183,7 +183,7 @@ de la page comics portent les noms des classNames de la page Home */
 }  */
 
 .modal-root {
-  color: red;
+  color: green;
   /* Pour que la modal prenne tout l'écran : */
   position: absolute;
   height: 100vh;
@@ -259,7 +259,7 @@ de la page comics portent les noms des classNames de la page Home */
 .descOfComicsOfChar {
   margin-top: 10px;
   text-align: center;
-  color: red;
+  color: green;
   width: 250px;
   height: 60px;
   overflow: scroll;
