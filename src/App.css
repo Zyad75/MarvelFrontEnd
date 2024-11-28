@@ -52,6 +52,7 @@ de la page comics portent les noms des classNames de la page Home */
 .sectionCharacters {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin: 0 auto;
   width: fit-content;
@@ -128,7 +129,7 @@ de la page comics portent les noms des classNames de la page Home */
   justify-content: flex-start;
   gap: 15px;
   margin: 50px;
-  margin-left: 150px;
+  margin-left: 200px;
   flex-shrink: 0;
   flex-wrap: wrap;
   text-align: center;
@@ -248,6 +249,7 @@ de la page comics portent les noms des classNames de la page Home */
 }
 .avatarOfImg {
   height: 60px;
+  width: 60px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -275,6 +277,9 @@ de la page comics portent les noms des classNames de la page Home */
   background-color: white;
   color: black;
   border: none;
+
+  /* position: sticky;
+  top: 400px; */
 }
 .buttonDescComicsOfChar:hover {
   opacity: 0.7;

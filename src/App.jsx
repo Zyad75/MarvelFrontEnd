@@ -13,6 +13,7 @@ import LogoMarvel from "./assets/LogoMarvel.png";
 function App() {
   const [nameOfChar, setNameOfChar] = useState("");
   const [avatarOfChar, setAvatarOfChar] = useState(``);
+  const [favoris, setFavoris] = useState(false);
 
   return (
     <Router>
@@ -41,17 +42,21 @@ function App() {
             <Home
               setNameOfChar={setNameOfChar}
               setAvatarOfChar={setAvatarOfChar}
+              setFavoris={setFavoris}
             />
           }
         ></Route>
-        <Route path="/comics" element={<Comics />}></Route>
+        <Route
+          path="/comics"
+          element={<Comics setFavoris={setFavoris} />}
+        ></Route>
         <Route
           path="/comicsOfChar/:id"
           element={
             <ComicsOfChar nameOfChar={nameOfChar} avatarOfChar={avatarOfChar} />
           }
         ></Route>
-        <Route path="/favoris" element={<Favoris />}></Route>
+        <Route path="/favoris" element={<Favoris favoris={favoris} />}></Route>
       </Routes>
     </Router>
   );
