@@ -52,6 +52,31 @@ header img {
   padding: 10px;
   position: sticky;
   top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.buttonPage {
+  background-color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+}
+.buttonPage:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.buttonPageDiv {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.offButtonPageSuivante {
+  display: none;
+}
+.offButtonPagePrecedente {
+  display: none;
 }
 .home {
   height: 1000px;

@@ -7,11 +7,12 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [visible, setVisible] = useState(false);
   const [description, setDescription] = useState("");
+  const [skip, setSkip] = useState(0);
   try {
     useEffect(() => {
       const fetchData = async () => {
         const response = await axios.get(
-          "https://site--marvel-backend--cszclskmpcqr.code.run/characters"
+          `https://site--marvel-backend--cszclskmpcqr.code.run/characters?skip=${skip}`
         );
         // console.log(response.data);
 
@@ -20,7 +21,7 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
         console.log(response.data);
       };
       fetchData();
-    }, []);
+    }, [skip]);
   } catch (error) {
     console.log(error);
   }
@@ -33,7 +34,35 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
       ) : (
         <div className="home">
           <section className="sectionCharacters">
-            <p className="principalTitleCharacters">Personnages Marvel</p>
+            <div className="principalTitleCharacters">
+              <div className="buttonPageDiv">
+                {" "}
+                <button
+                  className={
+                    skip === 0 ? "offButtonPagePrecedente" : "buttonPage"
+                  }
+                  onClick={() => {
+                    setSkip(skip - 100);
+                  }}
+                >
+                  Page précedente
+                </button>
+                <button
+                  className={
+                    skip === 1393 ? "offButtonPageSuivante" : "buttonPage"
+                  }
+                  onClick={() => {
+                    setSkip(skip + 100);
+                    {
+                      skip === 1400 && setSkip(skip + 93);
+                    }
+                  }}
+                >
+                  Page suivante
+                </button>
+              </div>
+              <p>Personnages Marvel</p>
+            </div>
             <div className="charAndImg">
               {data.results.map((elem) => {
                 const character = elem._id;
