@@ -10,7 +10,9 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
   try {
     useEffect(() => {
       const fetchData = async () => {
-        const response = await axios.get("http://localhost:3000/characters");
+        const response = await axios.get(
+          "https://site--marvel-backend--cszclskmpcqr.code.run/characters"
+        );
         // console.log(response.data);
 
         setIsLoading(false);
