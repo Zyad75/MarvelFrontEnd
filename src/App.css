@@ -1,5 +1,4 @@
 body {
-  width: 1470px;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------
@@ -39,6 +38,25 @@ header img {
   align-items: center;
   margin: 0 auto;
   width: fit-content;
+  position: relative;
+}
+.principalTitleCharacters {
+  margin-top: 20px;
+  border: solid 1px black;
+  border-radius: 4px;
+  color: white;
+  width: 95%;
+  text-align: center;
+  background-color: black;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+.home {
+  height: 1000px;
+  width: 1470px;
+  overflow: scroll;
+  scrollbar-width: none;
 }
 .charAndImg {
   display: flex;
@@ -74,15 +92,15 @@ header img {
 }
 /*------------ModAL-------------*/
 .home {
-  position: relative;
+  /* position: relative;*/
 }
 
 .modal-root {
   color: red;
   /* Pour que la modal prenne tout l'écran : */
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   /* Pour placer la modal tout en haut à gauche une fois en position relative */
   top: 0;
   left: 0;

@@ -31,7 +31,7 @@ const Home = () => {
       ) : (
         <div className="home">
           <section className="sectionCharacters">
-            <p>Personnages Marvel</p>
+            <p className="principalTitleCharacters">Personnages Marvel</p>
             <div className="charAndImg">
               {data.results.map((elem) => {
                 const character = elem._id;
