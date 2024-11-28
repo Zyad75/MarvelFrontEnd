@@ -95,6 +95,17 @@ header img {
   gap: 10px;
   margin-bottom: 10px;
 }
+.buttonDescCharacters {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px;
+}
+.buttonDescCharacters:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
 /*------------ModAL-------------*/
 /* .home {
    position: relative;
@@ -149,6 +160,7 @@ header img {
 .divCommicsOfChar {
   margin: 50px 50px;
   display: flex;
+  align-items: center;
   flex-shrink: 0;
   flex-wrap: wrap;
   gap: 100px;
@@ -156,6 +168,7 @@ header img {
 .divImgAndTitleOfComicsOfChar {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
   text-align: center;
 }
@@ -171,4 +184,28 @@ header img {
   font-weight: bold;
   font-size: 20px;
   margin-right: 30px;
+}
+.descOfComicsOfChar {
+  margin-top: 10px;
+  text-align: center;
+  color: red;
+  width: 250px;
+  height: 60px;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.setOffDesc {
+  display: none;
+}
+.buttonDescComicsOfChar {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  border: none;
+}
+.buttonDescComicsOfChar:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }

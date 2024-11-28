@@ -60,6 +60,7 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
                       </Link>
                       {elem.description && (
                         <button
+                          className="buttonDescCharacters"
                           onClick={() => {
                             setVisible(!visible);
                             setDescription(elem.description);

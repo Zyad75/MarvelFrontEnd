@@ -5,6 +5,7 @@ const ComicsOfChar = ({ nameOfChar, avatarOfChar }) => {
   const { id } = useParams();
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [description, setDescription] = useState(false);
   try {
     useEffect(() => {
       const fetchData = async () => {
@@ -43,8 +44,17 @@ const ComicsOfChar = ({ nameOfChar, avatarOfChar }) => {
                 dans ces comics :{" "}
               </p>
             </div>
+
             {data === null && <p>aucun Comics ne présente ce personnage</p>}
             <div className="divCommicsOfChar">
+              <button
+                className="buttonDescComicsOfChar"
+                onClick={() => {
+                  setDescription(!description);
+                }}
+              >
+                Description du Comic
+              </button>
               {data.map((elem, index) => {
                 return (
                   <>
@@ -55,6 +65,14 @@ const ComicsOfChar = ({ nameOfChar, avatarOfChar }) => {
                         alt=""
                       />
                       <p className="titleOfComicsOfChar">{elem.title}</p>
+
+                      <p
+                        className={
+                          description ? "descOfComicsOfChar" : "setOffDesc"
+                        }
+                      >
+                        {elem.description}
+                      </p>
                     </div>
                   </>
                 );
