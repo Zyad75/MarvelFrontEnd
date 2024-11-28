@@ -1,11 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import Modal from "../components/Modal";
 const Comics = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [skip, setSkip] = useState(0);
   const [titleFilter, setTitleFilter] = useState("");
+  const [visible, setVisible] = useState(false);
+  const [description, setDescription] = useState("");
   try {
     useEffect(() => {
       const fetchData = async () => {
@@ -87,8 +89,8 @@ const Comics = () => {
                         <button
                           className="buttonDescCharacters"
                           onClick={() => {
-                            // setVisible(!visible);
-                            // setDescription(elem.description);
+                            setVisible(!visible);
+                            setDescription(elem.description);
                           }}
                         >
                           Description
@@ -100,9 +102,9 @@ const Comics = () => {
               })}
             </div>
           </section>
-          {/* {visible && (
+          {visible && (
             <Modal setVisible={setVisible} description={description} />
-          )} */}
+          )}
         </div>
       )}
     </>
