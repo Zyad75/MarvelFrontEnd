@@ -1,0 +1,138 @@
+body {
+  width: 1470px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------- HEADER -----------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------ */
+header {
+  padding: 30px;
+}
+
+header img {
+  height: 40px;
+}
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu {
+  display: flex;
+  gap: 40px;
+}
+/* ------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------- Home Page -----------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------ */
+
+.sectionCharacters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: fit-content;
+}
+.charAndImg {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin: 50px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.imgChar {
+  height: 300px;
+  width: 250px;
+  object-fit: cover;
+}
+.descCharacter {
+  font-size: 12px;
+  width: 100px;
+}
+.linkComicsOfChar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: none;
+  color: black;
+}
+.charAndDesc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+/*------------ModAL-------------*/
+.home {
+  position: relative;
+}
+
+.modal-root {
+  color: red;
+  /* Pour que la modal prenne tout l'écran : */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* Pour placer la modal tout en haut à gauche une fois en position relative */
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Mettre un background noir et transparent : */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal {
+  background-color: white;
+  width: 700px;
+  height: 400px;
+  padding: 10px 50px;
+  /* Placer le button en haut à droite de la modal : */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.modal button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+/* ------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------- comicsOfChar Page -----------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------ */
+.sectionCommicsOfChar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.divCommicsOfChar {
+  margin: 50px 50px;
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+.divImgAndTitleOfComicsOfChar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+.titleOfComicsOfChar {
+  max-width: 250px;
+}
