@@ -3,6 +3,21 @@ body {
   background-color: black;
   color: white;
 }
+footer {
+  display: flex;
+  justify-content: center;
+  line-height: 200px;
+}
+.footer {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+.footer:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
 button {
   font-family: "kanit";
 }
