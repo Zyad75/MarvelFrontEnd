@@ -84,6 +84,7 @@ de la page comics portent les noms des classNames de la page Home */
 .titlePage:hover {
   background-color: lightgoldenrodyellow;
   color: black;
+  cursor: pointer;
 }
 .buttonPage {
   background-color: black;
