@@ -121,6 +121,9 @@ header img {
   flex-direction: column;
   align-items: flex-end;
 }
+.descModal {
+  text-align: center;
+}
 .modal button {
   display: flex;
   justify-content: center;

@@ -10,7 +10,7 @@ const Modal = ({ setVisible, description }) => {
         >
           X
         </button>
-        <p>{description}</p>
+        <p className="descModal">{description}</p>
       </div>
     </div>
   );
