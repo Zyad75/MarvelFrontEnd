@@ -26,6 +26,7 @@ const ComicsOfChar = () => {
       ) : (
         <>
           <section className="sectionCommicsOfChar">
+            {/* demain 28/11 je dois commencer par afficher le nom du personnage selon l'id et une mini image du perso */}
             <p>Personnage retrouvable dans ces comics : </p>
             {data === null && <p>aucun Comics ne présente ce personnage</p>}
             <div className="divCommicsOfChar">
