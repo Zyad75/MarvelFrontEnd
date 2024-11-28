@@ -12,6 +12,7 @@ import LogoMarvel from "./assets/LogoMarvel.png";
 
 function App() {
   const [nameOfChar, setNameOfChar] = useState("");
+  const [avatarOfChar, setAvatarOfChar] = useState(``);
 
   return (
     <Router>
@@ -30,12 +31,19 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Home setNameOfChar={setNameOfChar} />}
+          element={
+            <Home
+              setNameOfChar={setNameOfChar}
+              setAvatarOfChar={setAvatarOfChar}
+            />
+          }
         ></Route>
         <Route path="/comics" element={<Comics />}></Route>
         <Route
           path="/comicsOfChar/:id"
-          element={<ComicsOfChar nameOfChar={nameOfChar} />}
+          element={
+            <ComicsOfChar nameOfChar={nameOfChar} avatarOfChar={avatarOfChar} />
+          }
         ></Route>
         <Route path="/favoris" element={<Favoris />}></Route>
       </Routes>

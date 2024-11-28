@@ -55,7 +55,7 @@ header img {
 }
 .home {
   height: 1000px;
-  width: 1470px;
+  width: 100%;
   overflow: scroll;
   scrollbar-width: none;
 }
@@ -64,6 +64,7 @@ header img {
   justify-content: flex-start;
   gap: 15px;
   margin: 50px;
+  margin-left: 150px;
   flex-shrink: 0;
   flex-wrap: wrap;
   text-align: center;
@@ -160,4 +161,14 @@ header img {
 }
 .titleOfComicsOfChar {
   max-width: 250px;
+}
+.avatarOfImg {
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.nameOfChar {
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 30px;
 }

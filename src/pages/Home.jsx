@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Modal from "../components/Modal";
 import { Link } from "react-router-dom";
-const Home = ({ setNameOfChar }) => {
+const Home = ({ setNameOfChar, setAvatarOfChar }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [visible, setVisible] = useState(false);
@@ -44,6 +44,9 @@ const Home = ({ setNameOfChar }) => {
                         to={`/comicsOfChar/${character}`}
                         onClick={() => {
                           setNameOfChar(elem.name);
+                          setAvatarOfChar(
+                            `${elem.thumbnail.path}.${elem.thumbnail.extension}`
+                          );
                         }}
                       >
                         <img
