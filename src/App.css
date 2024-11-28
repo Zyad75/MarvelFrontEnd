@@ -1,7 +1,11 @@
 body {
   font-family: "kanit", sans-serif;
+  background-color: black;
+  color: white;
 }
-
+button {
+  font-family: "kanit";
+}
 /* ------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------
@@ -25,6 +29,14 @@ header img {
   display: flex;
   gap: 40px;
 }
+.menuLinks {
+  color: white;
+  text-decoration: none;
+}
+.menuLinks:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
 /* ------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------
@@ -43,12 +55,12 @@ header img {
 }
 .principalTitleCharacters {
   margin-top: 20px;
-  border: solid 1px black;
+  border: solid 1px lightgoldenrodyellow;
   border-radius: 4px;
-  color: white;
+  color: black;
   width: 95%;
   text-align: center;
-  background-color: black;
+  background-color: lightgoldenrodyellow;
   padding: 10px;
   position: sticky;
   top: 0;
@@ -58,7 +70,8 @@ header img {
   gap: 20px;
 }
 .buttonPage {
-  background-color: white;
+  background-color: black;
+  color: white;
   padding: 5px;
   border: none;
   border-radius: 8px;
@@ -77,6 +90,15 @@ header img {
 }
 .offButtonPagePrecedente {
   display: none;
+}
+.searchBarCharacter {
+  background-color: black;
+  color: white;
+  height: 30px;
+  width: 200px;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
 }
 .home {
   height: 1000px;
@@ -111,7 +133,7 @@ header img {
   flex-direction: column;
   gap: 10px;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .charAndDesc {
   display: flex;
@@ -121,8 +143,8 @@ header img {
   margin-bottom: 10px;
 }
 .buttonDescCharacters {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   border: none;
   border-radius: 4px;
   padding: 5px;
@@ -149,10 +171,10 @@ header img {
   justify-content: center;
   align-items: center;
   /* Mettre un background noir et transparent : */
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(233, 226, 226, 0.5);
 }
 .modal {
-  background-color: white;
+  background-color: black;
   width: 700px;
   height: 400px;
   padding: 10px 50px;
@@ -226,8 +248,8 @@ header img {
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   border: none;
 }
 .buttonDescComicsOfChar:hover {

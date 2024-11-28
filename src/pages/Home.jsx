@@ -8,11 +8,12 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
   const [visible, setVisible] = useState(false);
   const [description, setDescription] = useState("");
   const [skip, setSkip] = useState(0);
+  const [nameFilter, setNameFilter] = useState("");
   try {
     useEffect(() => {
       const fetchData = async () => {
         const response = await axios.get(
-          `https://site--marvel-backend--cszclskmpcqr.code.run/characters?skip=${skip}`
+          `https://site--marvel-backend--cszclskmpcqr.code.run/characters?skip=${skip}&name=${nameFilter}`
         );
         // console.log(response.data);
 
@@ -21,7 +22,7 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
         console.log(response.data);
       };
       fetchData();
-    }, [skip]);
+    }, [skip, nameFilter]);
   } catch (error) {
     console.log(error);
   }
@@ -62,6 +63,14 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
                 </button>
               </div>
               <p>Personnages Marvel</p>
+              <input
+                type="text"
+                placeholder="Rechercher un Personnage"
+                className="searchBarCharacter"
+                onChange={(event) => {
+                  setNameFilter(event.target.value);
+                }}
+              />
             </div>
             <div className="charAndImg">
               {data.results.map((elem) => {

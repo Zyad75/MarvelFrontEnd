@@ -22,9 +22,15 @@ function App() {
             <img src={LogoMarvel} alt="" />
           </Link>
           <div className="menu">
-            <Link to={"/"}>Personnages</Link>
-            <Link to={"/comics"}>Comics</Link>
-            <Link to={"/favoris"}>Favoris</Link>
+            <Link className="menuLinks" to={"/"}>
+              Personnages
+            </Link>
+            <Link className="menuLinks" to={"/comics"}>
+              Comics
+            </Link>
+            <Link className="menuLinks" to={"/favoris"}>
+              Favoris
+            </Link>
           </div>
         </div>
       </header>
