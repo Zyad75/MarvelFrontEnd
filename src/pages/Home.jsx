@@ -9,6 +9,7 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
   const [description, setDescription] = useState("");
   const [skip, setSkip] = useState(0);
   const [nameFilter, setNameFilter] = useState("");
+  const [counterPage, setCounterPage] = useState(1);
   try {
     useEffect(() => {
       const fetchData = async () => {
@@ -44,33 +45,40 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
                   }
                   onClick={() => {
                     setSkip(skip - 100);
+                    setCounterPage(counterPage - 1);
                   }}
                 >
                   Page précedente
                 </button>
+                <p>
+                  {counterPage}/{1493 / 100 + 0.07}
+                </p>
                 <button
                   className={
-                    skip === 1393 ? "offButtonPageSuivante" : "buttonPage"
+                    skip >= 1393 ? "offButtonPageSuivante" : "buttonPage"
                   }
                   onClick={() => {
                     setSkip(skip + 100);
                     {
                       skip === 1400 && setSkip(skip + 93);
                     }
+                    setCounterPage(counterPage + 1);
                   }}
                 >
                   Page suivante
                 </button>
               </div>
               <p className="titlePage">Personnages Marvel</p>
-              <input
-                type="text"
-                placeholder="Rechercher un Personnage"
-                className="searchBarCharacter"
-                onChange={(event) => {
-                  setNameFilter(event.target.value);
-                }}
-              />
+              {skip === 0 && (
+                <input
+                  type="text"
+                  placeholder="Rechercher un Personnage"
+                  className="searchBarCharacter"
+                  onChange={(event) => {
+                    setNameFilter(event.target.value);
+                  }}
+                />
+              )}
             </div>
             <div className="charAndImg">
               {data.results.map((elem) => {

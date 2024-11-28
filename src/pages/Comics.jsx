@@ -8,6 +8,8 @@ const Comics = () => {
   const [titleFilter, setTitleFilter] = useState("");
   const [visible, setVisible] = useState(false);
   const [description, setDescription] = useState("");
+  const [counterPage, setCounterPage] = useState(1);
+
   try {
     useEffect(() => {
       const fetchData = async () => {
@@ -18,6 +20,7 @@ const Comics = () => {
 
         setIsLoading(false);
         setData(response.data);
+
         console.log(response.data);
       };
       fetchData();
@@ -42,13 +45,17 @@ const Comics = () => {
                   }
                   onClick={() => {
                     setSkip(skip - 100);
+                    setCounterPage(counterPage - 1);
                   }}
                 >
                   Page précedente
                 </button>
+                <p>
+                  {counterPage}/{47397 / 100 + 0.03}
+                </p>
                 <button
                   className={
-                    skip === data.count - 100
+                    skip >= data.count - 100
                       ? "offButtonPageSuivante"
                       : "buttonPage"
                   }
@@ -57,20 +64,23 @@ const Comics = () => {
                     {
                       skip === 47300 && setSkip(skip + 97);
                     }
+                    setCounterPage(counterPage + 1);
                   }}
                 >
                   Page suivante
                 </button>
               </div>
               <p className="titlePage">Marvel Comics</p>
-              <input
-                type="text"
-                placeholder="Rechercher un Comic"
-                className="searchBarCharacter"
-                onChange={(event) => {
-                  setTitleFilter(event.target.value);
-                }}
-              />
+              {skip === 0 && (
+                <input
+                  type="text"
+                  placeholder="Rechercher un Comic"
+                  className="searchBarCharacter"
+                  onChange={(event) => {
+                    setTitleFilter(event.target.value);
+                  }}
+                />
+              )}
             </div>
             <div className="charAndImg">
               {data.results.map((elem) => {
