@@ -8,7 +8,7 @@ import Comics from "./pages/Comics";
 import ComicsOfChar from "./pages/ComicsOfChar";
 import Favoris from "./pages/Favoris";
 //---Images----//
-import LogoMarvel from "./assets/LogoMarvel.png";
+import LogoMarvel2 from "./assets/LogoMarvel2.png";
 
 function App() {
   const [nameOfChar, setNameOfChar] = useState("");
@@ -20,7 +20,7 @@ function App() {
       <header>
         <div className="headerContainer">
           <Link to={"/"}>
-            <img src={LogoMarvel} alt="" />
+            <img src={LogoMarvel2} alt="" />
           </Link>
           <div className="menu">
             <Link className="menuLinks" to={"/"}>
@@ -60,7 +60,7 @@ function App() {
       </Routes>
       <footer>
         <p>
-          Made with{" "}
+          2024 © Made with{" "}
           <a href="https://fr.react.dev/" target="blank" className="footer">
             React
           </a>{" "}
