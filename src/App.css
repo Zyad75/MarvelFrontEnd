@@ -19,6 +19,7 @@ header {
 
 header img {
   height: 40px;
+  object-fit: cover;
 }
 .headerContainer {
   display: flex;
@@ -45,6 +46,9 @@ header img {
 ------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------ */
 
+/*------ NB : les styles pour la page Home et pour la page Comics sont identiques donc les classNames des elements
+de la page comics portent les noms des classNames de la page Home */
+
 .sectionCharacters {
   display: flex;
   flex-direction: column;
@@ -67,7 +71,19 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 100px;
+}
+.titlePage {
+  font-size: 25px;
+  background-color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+.titlePage:hover {
+  background-color: lightgoldenrodyellow;
+  color: black;
 }
 .buttonPage {
   background-color: black;
@@ -143,7 +159,7 @@ header img {
   margin-bottom: 10px;
 }
 .buttonDescCharacters {
-  background-color: white;
+  background-color: lightgoldenrodyellow;
   color: black;
   border: none;
   border-radius: 4px;

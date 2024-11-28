@@ -62,7 +62,7 @@ const Comics = () => {
                   Page suivante
                 </button>
               </div>
-              <p>Comics Marvel</p>
+              <p className="titlePage">Comics Marvel</p>
               <input
                 type="text"
                 placeholder="Rechercher un Comic"

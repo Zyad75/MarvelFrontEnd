@@ -62,7 +62,7 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
                   Page suivante
                 </button>
               </div>
-              <p>Personnages Marvel</p>
+              <p className="titlePage">Personnages Marvel</p>
               <input
                 type="text"
                 placeholder="Rechercher un Personnage"
