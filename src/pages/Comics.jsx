@@ -71,16 +71,16 @@ const Comics = () => {
                 </button>
               </div>
               <p className="titlePage">Marvel Comics</p>
-              {skip === 0 && (
-                <input
-                  type="text"
-                  placeholder="Rechercher un Comic"
-                  className="searchBarCharacter"
-                  onChange={(event) => {
-                    setTitleFilter(event.target.value);
-                  }}
-                />
-              )}
+
+              <input
+                type="text"
+                placeholder="Rechercher un Comic"
+                className="searchBarCharacter"
+                onChange={(event) => {
+                  setTitleFilter(event.target.value);
+                  setSkip(0);
+                }}
+              />
             </div>
             <div className="charAndImg">
               {data.results.map((elem) => {

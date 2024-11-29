@@ -92,12 +92,12 @@ de la page comics portent les noms des classNames de la page Home */
 }
 .principalTitleCharacters {
   margin-top: 20px;
-  border: solid 1px lightgoldenrodyellow;
+  border: solid 1px rgb(189, 28, 28);
   border-radius: 4px;
   color: black;
   width: 95%;
   text-align: center;
-  background-color: lightgoldenrodyellow;
+  background-color: rgb(189, 28, 28);
   padding: 10px;
   position: sticky;
   top: 0;
@@ -115,8 +115,6 @@ de la page comics portent les noms des classNames de la page Home */
   color: white;
 }
 .titlePage:hover {
-  background-color: lightgoldenrodyellow;
-  color: black;
   cursor: pointer;
 }
 .buttonPage {
@@ -201,7 +199,7 @@ de la page comics portent les noms des classNames de la page Home */
   margin-bottom: 10px;
 }
 .buttonDescCharacters {
-  background-color: lightgoldenrodyellow;
+  background-color: rgb(189, 28, 28);
   color: black;
   border: none;
   border-radius: 4px;

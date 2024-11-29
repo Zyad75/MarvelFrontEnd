@@ -69,16 +69,15 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
                 </button>
               </div>
               <p className="titlePage">Personnages Marvel</p>
-              {skip === 0 && (
-                <input
-                  type="text"
-                  placeholder="Rechercher un Personnage"
-                  className="searchBarCharacter"
-                  onChange={(event) => {
-                    setNameFilter(event.target.value);
-                  }}
-                />
-              )}
+              <input
+                type="text"
+                placeholder="Rechercher un Personnage"
+                className="searchBarCharacter"
+                onChange={(event) => {
+                  setNameFilter(event.target.value);
+                  setSkip(0);
+                }}
+              />
             </div>
             <div className="charAndImg">
               {data.results.map((elem) => {
