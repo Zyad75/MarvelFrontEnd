@@ -79,6 +79,7 @@ const Comics = () => {
                 onChange={(event) => {
                   setTitleFilter(event.target.value);
                   setSkip(0);
+                  setCounterPage(1);
                 }}
               />
             </div>

@@ -76,6 +76,7 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
                 onChange={(event) => {
                   setNameFilter(event.target.value);
                   setSkip(0);
+                  setCounterPage(1);
                 }}
               />
             </div>
