@@ -5,9 +5,12 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
+  const [errorMessage, setErrorMessage] = useState(null);
+
   const handleSubmit = async (event) => {
     event.preventDefault(); // sinon reset de mes states et de ma page
     // console.log("submited");
+    setErrorMessage(null);
     try {
       const response = await axios.post(
         "https://site--marvel-backend--cszclskmpcqr.code.run/user/signup",
@@ -21,6 +24,13 @@ const Signup = () => {
       console.log(response.data);
     } catch (error) {
       alert(error.message);
+      if (error.response.status === 409) {
+        setErrorMessage("adresse déja utilisée");
+      } else if (error.response.data.message === "Missing parameters") {
+        setErrorMessage("Veuillez renseigner toutes vos informations");
+      } else {
+        setErrorMessage("Erreur, veuillez réessayer svp !");
+      }
     }
   };
   const handleUsernameChange = (event) => {
@@ -63,6 +73,7 @@ const Signup = () => {
             }}
           />
           <input className="submitInput" type="submit" value={"M'inscrire"} />
+          {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
         </form>
         <Link style={{ textDecoration: "none", color: "white" }} to={"/login"}>
           {" "}
