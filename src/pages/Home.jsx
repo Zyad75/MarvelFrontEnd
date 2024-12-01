@@ -121,7 +121,7 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
                             Description
                           </button>
                         )}
-                        <button
+                        {/* <button
                           onClick={() => {
                             setFavCharacter([...favCharacter, elem]);
 
@@ -156,7 +156,7 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
                           onClick={() => {
                             console.log(favCharacter);
                           }}
-                        ></button>
+                        ></button> */}
                       </div>
                     </div>
                   </>
