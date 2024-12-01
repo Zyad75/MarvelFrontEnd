@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Modal from "../components/Modal";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = ({ setNameOfChar, setAvatarOfChar }) => {
   const [data, setData] = useState({});
@@ -12,7 +12,7 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
   const [skip, setSkip] = useState(0);
   const [nameFilter, setNameFilter] = useState("");
   const [counterPage, setCounterPage] = useState(1);
-  const [favCharacter, setFavCharacter] = useState([]);
+  //   const [favCharacter, setFavCharacter] = useState([]);
 
   try {
     useEffect(() => {
@@ -28,7 +28,7 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
       };
       fetchData();
       //   Cookies.set("favChar", JSON.stringify(favCharacter));
-    }, [skip, nameFilter, favCharacter]);
+    }, [skip, nameFilter /*favCharacter*/]);
   } catch (error) {
     console.log(error);
   }
