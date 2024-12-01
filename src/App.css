@@ -73,6 +73,24 @@ header img:hover {
 .loginSignupLinks {
   display: flex;
 }
+.authLinks {
+  border: solid 2px white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 120px;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+}
+.authLinks:hover {
+  cursor: pointer;
+  border: solid 2px black;
+  background-color: white;
+  color: black;
+  border-radius: 3px;
+}
 /* ------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------

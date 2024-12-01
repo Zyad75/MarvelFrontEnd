@@ -34,10 +34,10 @@ function App() {
             <img src={LogoMarvel2} alt="" />
           </Link>
           <div className="loginSignupLinks">
-            <Link className="menuLinks" to={"/signup"}>
+            <Link className="authLinks" to={"/signup"}>
               Inscription
             </Link>
-            <Link className="menuLinks" to={"/login"}>
+            <Link className="authLinks" to={"/login"}>
               Se Connecter
             </Link>
           </div>
