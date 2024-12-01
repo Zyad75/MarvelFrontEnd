@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Modal from "../components/Modal";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Home = ({ setNameOfChar, setAvatarOfChar }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -10,6 +12,8 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
   const [skip, setSkip] = useState(0);
   const [nameFilter, setNameFilter] = useState("");
   const [counterPage, setCounterPage] = useState(1);
+  const [favCharacter, setFavCharacter] = useState([]);
+
   try {
     useEffect(() => {
       const fetchData = async () => {
@@ -23,7 +27,8 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
         console.log(response.data);
       };
       fetchData();
-    }, [skip, nameFilter]);
+      //   Cookies.set("favChar", JSON.stringify(favCharacter));
+    }, [skip, nameFilter, favCharacter]);
   } catch (error) {
     console.log(error);
   }
@@ -104,17 +109,55 @@ const Home = ({ setNameOfChar, setAvatarOfChar }) => {
                         />
                         <p className="nameChar">{elem.name}</p>
                       </Link>
-                      {elem.description && (
+                      <div style={{ display: "flex", gap: "10px" }}>
+                        {elem.description && (
+                          <button
+                            className="buttonDescCharacters"
+                            onClick={() => {
+                              setVisible(!visible);
+                              setDescription(elem.description);
+                            }}
+                          >
+                            Description
+                          </button>
+                        )}
                         <button
-                          className="buttonDescCharacters"
                           onClick={() => {
-                            setVisible(!visible);
-                            setDescription(elem.description);
+                            setFavCharacter([...favCharacter, elem]);
+
+                            //     : (indeX = favCharacter.indexOf(elem));
+                            //   setFavCharacter();
+
+                            // {
+                            //   !buttonFavState &&
+                            //     setFavCharacter(
+                            //       favCharacter.filter((a) => {
+                            //         a._id !== elem._id;
+                            //       })
+                            //     );
+                            // }
                           }}
                         >
-                          Description
+                          <FontAwesomeIcon icon="star" />
                         </button>
-                      )}
+                        <button
+                          onClick={() => {
+                            // const newTab = [...favCharacter];
+                            // const indeX = newTab.indexOf();
+                            // newTab.splice(indeX, 1);
+                            setFavCharacter(
+                              favCharacter.filter((a) => a._id !== elem._id)
+                            );
+                          }}
+                        >
+                          <FontAwesomeIcon icon="trash" />
+                        </button>
+                        <button
+                          onClick={() => {
+                            console.log(favCharacter);
+                          }}
+                        ></button>
+                      </div>
                     </div>
                   </>
                 );

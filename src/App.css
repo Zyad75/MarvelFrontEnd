@@ -70,6 +70,9 @@ header img:hover {
   color: black;
   border-radius: 3px;
 }
+.loginSignupLinks {
+  display: flex;
+}
 /* ------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------
@@ -209,6 +212,21 @@ de la page comics portent les noms des classNames de la page Home */
   opacity: 0.7;
   cursor: pointer;
 }
+/* Styles bouttons favoris */
+
+.favButton {
+  color: gold;
+  border: white;
+}
+.noFav {
+  background-color: black;
+  color: white;
+}
+.buttonDeSetFav {
+  border: none;
+  background-color: black;
+}
+
 /*------------ModAL-------------*/
 /* .home {
    position: relative;
@@ -317,5 +335,47 @@ de la page comics portent les noms des classNames de la page Home */
   border: white solid 2px;
   color: white;
 
+  cursor: pointer;
+}
+/* ------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------- Signup Page -----------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------ */
+
+.SignUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.formSignUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.formInputs {
+  width: 200px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-bottom: white solid 1px;
+}
+
+.submitInput {
+  margin-top: 10px;
+  border-radius: 4px;
+  border: solid 2px white;
+  background-color: black;
+  color: white;
+  height: 25px;
+  width: 180px;
+}
+.submitInput:hover {
+  opacity: 0.7;
   cursor: pointer;
 }
