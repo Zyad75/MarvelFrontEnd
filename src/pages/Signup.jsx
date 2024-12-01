@@ -10,7 +10,7 @@ const Signup = () => {
     // console.log("submited");
     try {
       const response = await axios.post(
-        "https://site--marvel-backend--cszclskmpcqr.code.run/user",
+        "https://site--marvel-backend--cszclskmpcqr.code.run/user/signup",
         {
           username: username,
           password: password,
